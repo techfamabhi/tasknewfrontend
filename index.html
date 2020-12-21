@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>  
+<script>  
+    function validateForm() {  
+        //collect form data in JavaScript variables  
+        var pw1 = document.getElementById("pswd1").value;  
+        var pw2 = document.getElementById("pswd2").value;  
+      
+        
+        //check empty password field  
+        if(pw1 == "") {  
+          document.getElementById("message1").innerHTML = "**Fill the password please!";  
+          return false;  
+        }  
+        
+        //check empty confirm password field  
+        if(pw2 == "") {  
+          document.getElementById("message2").innerHTML = "**Enter the password please!";  
+          return false;  
+        }   
+         
+        //minimum password length validation  
+        if(pw1.length < 8) {  
+          document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";  
+          return false;  
+        }  
+      
+        //maximum length of password validation  
+        if(pw1.length > 15) {  
+          document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
+          return false;  
+        }  
+        
+        if(pw1 != pw2) {  
+          document.getElementById("message2").innerHTML = "**Passwords are not same";  
+          return false;  
+        } else {  
+          alert ("Your password created successfully");  
+          document.write("."); 
+          document.location = "./pass_changed.html"; 
+        }  
+     }  
+    </script>  
+  
+<body>  
+
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3498DB">
+        <a class="navbar-brand" href="#">
+            <img src="./images/logo.png" alt="" srcset="" style="width: 100px;height: 42px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse " id="navbarSupportedContent" style="margin-left:950px;">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><b>Join a Race</b> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link ml-4" href="#"><b>Leaderboard</b></a>
+            </li>
+            
+          
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button style="background-color: white;color: black;width: 150px;" type="submit">Login</button>
+          </form>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="newmain">
+    
+    <div class="box">
+        <h2 style="color: black;margin-top: 150px;margin-left: -95px;" ><b>Password Reset</b></h2> <br>
+
+<form onsubmit ="return validateForm()"  style="margin-top: -29px;">  
+  
+<!-- Enter first name -->  
+  
+<!-- Create a new password -->  
+<div class="container d-flex justify-content-center ">
+    <div class="form-group">
+        <label for=""><b>NEW PASSWORD</b></label> <br>
+<input type = "password" class="form-group input1" id = "pswd1" value = "">   
+</div>
+
+<br>
+</div>
+
+<div class="container d-flex justify-content-center ">
+    <div class="form-group">
+        <label for=""><b>RE-ENTER NEW PASSWORD</b></label> <br><input type = "password" class="form-group input1" id = "pswd2" value = "">   
+<span id = "message2" style="color:red"> </span> <br><br>  
+</div>
+<br>
+
+
+</div>
+
+  
+<!-- Click to verify valid password --> 
+
+<div class="d-flex justify-content-center mb-3">
+    <button type="submit" value = "Submit">SUBMIT PASSWORD</button>
+</div>
+<span id = "message1" style="color:red;margin-left: 600px;margin-top:100px;"> </span> <br><br>  
+
+  
+</form>  
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3498DB; position: absolute;
+bottom: 0;
+left: 0;width: 100%;">
+   
+    
+  
+    <div class="collapse navbar-collapse " id="navbarSupportedContent" style="margin-left: 470px;">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link ml-4" href="#" style="color: white;"><b>About Us</b> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link ml-4" href="#" style="color: white;"><b>Privacy Policy</b> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link ml-4" href="#" style="color: white;"><b>Tutorial</b> <span class="sr-only">(current)</span></a>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link ml-4 ml-4" href="#" style="color: white;"><b>Terms of Services</b></a>
+        </li>
+        
+      
+      </ul>
+     
+    </div>
+  </nav>
+
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
